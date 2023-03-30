@@ -1,67 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Point and Click</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Shrikhand&display=swap"
+        rel="stylesheet">
+    <title>point and click adventure</title>
 </head>
+
 <body>
-    
-    <h1 id="mainTitle">ClickClackCloek</h1>
-
+    <div id="title">
+        <h1 id="mainTitle"></h1>
+    </div>
     <div id="gameWindow">
-        <!-- Foreground -->
-        <div id="dialogBar" class="Foreground">
-            <div  id="brownbar"></div>
-            <div id="mainCharacterSpeech" class="speech-bubble"> ... </div>
-            <img  class="Foreground" id="hero" src="./img/" alt="portrait">
-            
-            
-        </div>
-        <div id="door1" class="Foreground"> 
-    </div>
+        <!--dialog bar-->
+        <div id="dialogBar" class="foreground">
+            <div id="setMainDialog">
+                <img id="hero" class="foreground" src="img/knight_f_idle_anim_f0.png" alt="portrait">
+                <div id="mainCharacterSpeech" class="foreground speech-bubble">...</div>
 
-        <!-- Charater -->
+                <div id="counterSpeech" class="foreground speech-bubble">...</div>
+                <img id="counterCharacter" class="foreground" src="img/portairStatue.png" alt="The other person">
+                <div id="brownBar"></div>
+            </div>
+        </div>
+
+        <!-- inventory -->
+        <div id="invetoryBox" class="foreground">
+            <p>Inventory</p>
+            <ul id="inventoryList">
+
+            </ul>
+        </div>
+
+
+        <!--Foreground-->
+        <div id="Chest" class="foreground">
+            <img id="chest" img src="img/chest_full_open_anim_f0.png" alt="chest">
+        </div>
+        <div id="Chest01" class="foreground">
+            <img id="chest01" img src="img/chest_full_open_anim_f0.png" alt="chest01">
+        </div>
+        <div id="Chest02" class="foreground">
+            <img id="chest02" img src="img/chest_full_open_anim_f0.png" alt="chest02">
+        </div>
+        <div id="princess01" class="foreground">
+            <img id="princess" src="img/princess.png" alt="It's a princess">
+        </div>
+        <div id="monster01" class="foreground">
+            <img id="monster" src="img/Untitled-2.png" alt="It's a monster">
+        </div>
+        <div id="signToLeft" class="foreground"></div>
+        <div id="door1" class="foreground"></div>
+        <div id="door2" class="foreground"></div>
+        <div id="statue" class="foreground"></div>
+        <div id="grave" class="foreground"></div>
+
+
+        <!-- Character -->
         <div id="mainCharacter" class="character">
-            <div id="mainCharacterSpeech" class="speech-bubble">
-               ...
-            </div>
-            <img src="img/knight_f_idle_anim_f0.png" alt="Main Character">
+            <img src="img/knight_f_idle_anim_f0.png" alt="main character">
         </div>
+
+
         <!-- Background -->
-        <div id="titlemap" class="background">
-            <img src="img/Tilemap for point and click game.png" alt="tilemap">
-            <div id="sideCharacter01" class="Foreground">
-                <img src="img/princess.png" alt="sideCharacter01">
-            </div>
-
-            <div id="sideCharacter02" class="Foreground">
-                <img src="img/Untitled-2.png" alt="sideCharacter02">
-            </div>
-
-            <div id="chest01" class="Foreground">
-                <img src="img/chest_full_open_anim_f0.png" alt="chest01">
-            </div>
-
-            <div id="chest02" class="Foreground">
-                <img src="img/chest_full_open_anim_f0.png" alt="chest02">
-            </div>
-
-            <div id="chest03" class="Foreground">
-                <img src="img/chest_full_open_anim_f0.png" alt="chest03">
-            </div>
-
-
+        <div id="tilemap" class="background">
+            <img draggable="false" src="img/Tilemap for point and click game.png" alt="tilemap 1">
         </div>
     </div>
-    <script src="js/javascript.js"></script>
 
-    <Audio id="characterAudio">
-        <source src="./audio/Gibberish - Sound Effect_01.mp3">
-    </Audio>
-
+    <audio id="characterAudio">
+        <source src="audio/Gibberish - Sound Effect_01.ogg" type="audio/ogg">
+        <source src="audio/Gibberish - Sound Effect_01.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="counterAudio">
+        <source src="audio/high pitch voice.ogg" type="audio/ogg">
+        <source src="audio/high pitch voice.mp3" type="audio/mpeg">
+    </audio>
+    <script src="js/index.js"></script>
 </body>
-</head>
+
 </html>

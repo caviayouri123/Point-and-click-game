@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>point and click adventure</title>
+    <link href="css/style3.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1 id="mainTitle"></h1>
+    <div id="gameWindow">
+
+        <!--foreground layer-->
+        <div id="door1" class="gameObject foreground"></div>
+        <div id="door2" class="gameObject foreground"></div>
+
+        <!--main character layer-->
+        <div id="mainCharacter" class="gameObject character">
+            <img src="img/animated-character-1-idle.gif" alt="main character">
+        </div>
+
+        <!--background layer-->
+        <div id="titlemap" class="gameObject background">
+            <img src="img/tilemap1.jpg" alt="tilemap">
+        </div>
+    </div>
+    <script src="js/index3.js"></script>
+</body>
+
+</html>
